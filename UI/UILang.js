@@ -1,0 +1,21 @@
+var lang = {
+    'authority': "Authority:",
+    'VD': "Vehicle Delivery",
+    "VP": "Vehicle Purchase",
+    "AC": "Account Access",
+    "SV": "Sell a Vehicle",
+    "seller": "Seller",
+    "description": "Description",
+    "color": "Color",
+    "plate": "Plate",
+    "priceBill": "Price (USD)",
+    "purchaser": "Purchaser",
+    "date": "Date",
+    "transferVehicle": "Give the keys",
+    "unavailable": "Unavailable",
+    "takeable": "TAKEABLE",
+    "taken": "TAKEN",
+    "selled": "SELLED",
+    "inFactory": "IN FACTORY",
+    "plateUnknown": "PLATE UNKNOWN"
+}

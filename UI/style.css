@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 20px;
+    user-select: none;
+    font-family: sans-serif;
+
+}
+@font-face {
+    font-family: leftFont;
+    src: url(first.ttf);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input {
+    outline: none;
+    color: black;
+    font-size: 16px;
+}
+select {
+    outline: none;
+    color: black;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    font-size: 18px;
+    text-overflow: '';
+    height: 30px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    
+}
+option {
+    color: black;
+    height: 60px;
+    font-size: 18px;
+    font-family: leftFont;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-chevron-right:hover {
+    color: rgb(114, 108, 195) ;
+}
+
+.fa-chevron-left:hover {
+    color: rgb(114, 108, 195) ;
+}
+
+#panel {
+    display: inline-block;
+    width: 1200px;
+    height: 680px;
+    background-color: black;
+    border-radius: 15px;
+}
+
+#ustpanel {
+    height: 100px;
+    width: 100%;
+    display: inline-flex;
+    background: rgb(54,65,79);
+    background: radial-gradient(circle, rgba(54,65,79,1) 0%, rgba(43,47,55,1) 100%);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    justify-content: space-evenly;
+}
+
+.ustparca {
+    width: 33%;
+    height: 100px;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 20px;
+    position: relative;
+}
+
+#sirketisim {
+    font-size: 25px;
+    font-family: sans-serif;
+}
+
+#ustparcaspecial {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon {
+    width: 40px;
+    fill: white;
+    transition: all 200ms;
+}
+
+.icon path {
+    transition: all 100ms;
+}
+
+.icon:hover path {
+    fill: rgb(114, 108, 195) !important;
+}
+
+#altpanel {
+    height: 100px;
+    width: 100%;
+    background: rgb(43,47,54);
+    background: radial-gradient(circle, rgba(43,47,54,1) 0%, rgba(41,49,60,1) 100%);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+#cikisbtn {
+    background-color: transparent;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    height: 43px;
+    width: 189px;
+    display: inline-flex;
+    align-items: center;
+    transition: all 200ms;
+}
+
+#cikisbtn:hover {
+    color: rgb(114, 108, 195) !important;
+    fill: rgb(114, 108, 195) !important;
+}
+
+/* Middle */
+
+#ortapanel {
+    height: 480px;
+    width: 100%;
+    position: relative;
+    background: rgb(84,106,166);
+    background: linear-gradient(0deg, rgba(84,106,166,1) 0%, rgba(20,20,20,1) 100%);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.ortamenudeafulth {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.currentmenu {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+.home-left-holder {
+    width: 200px;
+    height: 100px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 5px;
+    font-family: sans-serif;
+}
+
+.btnmor {
+    width: 145px;
+    height: 35px;
+    border: none;
+    outline: none;
+    background-color: rgb(139, 130, 237);
+    font-family: sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    position: absolute;
+}
+
+#peral:hover {
+    background-color: rgb(121, 113, 204);
+}
+#peral:disabled {
+    background-color: rgb(96, 90, 167);
+}
+
+.btnbeyaz {
+    width: 145px;
+    height: 35px;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: red;
+    font-family: sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    position: absolute;
+}
+
+#perkov:hover {
+    background-color: rgb(219, 214, 214);
+}
+
+#perkov:disabled {
+    background-color: rgb(170, 169, 169);
+}
+
+.left-arrow {
+    font-size: 40px;
+}
+
+.right-arrow {
+    font-size: 40px;
+}
+
+/* personel alım seçim vs. vs. */
+
+#kararti {
+    position: fixed !important;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.267);
+    display: block;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 1;
+    z-index: 9999!important;
+}
+
+.beyazdik {
+    width: 350px;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.personelsecim {
+    display: inline-block;
+    width: 100%;
+    color: black;
+    font-family: sans-serif;
+    font-size: 23px;
+    border-bottom: rgba(0, 0, 0, 0.342) solid 1px;
+    transition: all 300ms;
+}
+
+.personelsecim:hover {
+    background-color: rgb(219, 219, 219);
+}
+
+#solTus {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#sagTus {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0, -50%);
+}
+
+.personel {
+    width: 80%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(55,61,81);
+    background: radial-gradient(circle, rgba(55,61,81,1) 0%, rgba(41,49,60,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.authorities {
+    width: 85%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.authority {
+    margin-bottom: 7px;
+}
+
+.authorityLabel {
+    font-size: 15px;
+}
+
+.authorityHolder {
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+#carsHolder {
+    width: 93%;
+    height: 65%;
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow-x: auto;
+}
+
+#carsHolder::-webkit-scrollbar {
+    width: 0;
+}
+
+
+.carsHolders {
+    margin-top: 6%;
+    margin-left: 3%;
+}
+
+.car {
+    width: 190px;
+    height: 130px;
+    display: flex;
+    background: rgb(62,63,69);
+    background: radial-gradient(circle, rgba(62,63,69,1) 0%, rgba(41,49,60,1) 100%);
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.carName{
+    font-size: 20px;
+}
+
+.carPrice {
+    font-size: 17px;
+    color: rgb(0, 200, 0) !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+fa-check-circle:hover {
+    color: purple;
+}
+
+.carStatus {
+    font-size: 17px;
+}
+
+.carPlate {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+#bill {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+}
+
+#createBillBox {
+    width: 60%;
+    height: 57%;
+    background-color: rgb(229, 233, 240);
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.billInputHolderForHalf {
+    width: 85%;
+    height: 20%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.billInputHolder {
+    width: 85%;
+    height: 20%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.halfBillInput {
+    display: inline-block;
+    width: 50%;
+}
+
+.billSelect {
+    width: 98%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.822);
+    font-size: 17px;
+}
+
+#billPrice {
+    height: 25px;
+}
+
+#billTextArea {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.822);
+    outline: none;
+    box-sizing: border-box;
+    padding: 5px;
+    resize: none;
+}
+
+#createBill {
+    width: 60%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    background: rgb(43,47,54);
+    background: radial-gradient(circle, rgba(43,47,54,1) 0%, rgba(41,49,60,1) 100%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: leftFont;
+    transition: all 1s;
+}
+
+#createBill:hover {
+    background: radial-gradient(circle, rgb(39, 43, 49) 0%, rgb(37, 44, 54) 100%);
+}
+
+#oldBills {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+#oldBillsHolder {
+    display: flex;
+    width: 805px;
+    height: 491px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    overflow-x: auto;
+}
+
+
+
+#oldBillsHolder::-webkit-scrollbar {
+    width: 0;
+}
+
+.oldBill {
+    display: inline-block;
+    width: 700px;
+    height: 310px;
+    background-color: rgb(254, 254, 254);
+    border-radius: 15px;
+    position: relative;
+    margin-left: 300px;
+
+}
+
+.oldBill:nth-of-type(1) {
+    margin-left: 50px;
+}
+
+.oldBill:nth-last-of-type(1){
+    margin-right: 50px;
+}
+
+.oldBillColor {
+    font-family: Bahnschrift SemiBold;
+    color: rgb(174, 98, 224);
+}
+
+.colorBlack {
+    color: black;
+    font-family: Bahnschrift SemiBold;
+    font-size: 18px;
+}
+
+th {
+    color: rgb(174, 98, 224);
+    font-size: 17px;
+    height: 40px;
+}
+
+tr {
+    border-bottom: 1px rgba(0, 0, 0, 0.603) solid;
+}
+
+tr > td {
+    font-size: 16px;
+}
+
+td {
+    color: black;
+    font-size: 17px;
+    height: 40px;
+}
+
+.oldBillTop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background: rgb(54,65,79);
+    background: radial-gradient(circle, rgba(54,65,79,1) 0%, rgba(43,47,55,1) 100%);
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.billInsideLeft {
+    display: inline-block;
+    width: 450px;
+    height: 250px;
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+.billInsideRight {
+    display: inline-block;
+    width: 242px;
+    height: 250px;
+    box-sizing: border-box;
+    padding: 10px;
+    position: absolute;
+    top: 88px;
+}
+
+.textRight {
+    text-align: right;
+}
+
+#animasyon {
+    position: fixed !important;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.267);
+    display: block;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 1;
+    z-index: 9999!important;
+}
+
+#animasyon div {
+    width: auto;
+    height: 20px;
+    background: rgb(84,106,166);
+    background: linear-gradient(0deg, rgba(84,106,166,1) 0%, rgba(20,20,20,1) 100%);
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    box-sizing: border-box;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    text-align: center;
+}
